@@ -1,0 +1,78 @@
+EXERCICIO 1
+close all
+clear 
+clc
+
+n=0:99
+
+x=2*cos((pi/3)*n) +sin((pi/5)*n);
+
+% a)
+figure
+stem(n,x)
+xlabel("Amostragem")
+ylabel("Amplitude")
+title("2*cos((pi/3)*n) +sin((pi/5)*n)")
+
+% b)
+%1  
+y=2*cos((pi/3)*(2*n)) +sin((pi/5)*(2*n));
+figure
+stem(n,y)
+xlabel("Amostragem")
+ylabel("Amplitude")
+title("2*cos((pi/3)*(2*n)) +sin((pi/5)*(2*n)")
+
+%2
+y1=2*cos((pi/3)*(-n)) +sin((pi/5)*(-n));
+figure
+stem(n,y1)
+xlabel("Amostragem")
+ylabel("Amplitude")
+title("2*cos((pi/3)*(-n)) +sin((pi/5)*(-n)))")
+
+%3
+y2=2*cos((pi/3)*(n-2)) +sin((pi/5)*(n-2));
+figure
+stem(n,y2)
+xlabel("Amostragem")
+ylabel("Amplitude")
+title("2*cos((pi/3)*(n-2)) +sin((pi/5)*(n-2))")
+
+%4
+y3=2*cos((pi/3)*(n.*cos((pi/2).*n))) +sin((pi/5)*(n.*cos((pi/2).*n)));
+figure
+stem(n,y3)
+xlabel("Amostragem")
+ylabel("Amplitude")
+title("2*cos((pi/3)*(n*cos(pi/2*n))) +sin((pi/5)*(n*cos(pi/2*n)))")
+
+% c)
+parteimpar = -x
+figure
+stem(n,parteimpar)
+xlabel("Amostragem")
+ylabel("Amplitude")
+title("Parte impar")
+
+EXERCICIO 2
+A= 0.5;
+B= 2;
+
+% y=A*x + B
+
+% a) i
+x1=ones(99);
+y1=zeros(99);
+for i=1:100
+    y1(i)=A.*x1(i)+B;
+end
+figure
+plot(y1);
+
+% a) ii
+
+% a) iii
+
+
+
